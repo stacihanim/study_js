@@ -1,7 +1,11 @@
 const firstNum = prompt('Enter the first number');
 const secondNum = prompt('Enter the second number');
-alert(`The result of addition is ${Number(firstNum) + Number(secondNum)}`);
-alert(`The result of subtraction is ${Number(firstNum) - Number(secondNum)}`);
-alert(`The result of multiplication is ${Number(firstNum) * Number(secondNum)}`);
-alert(`The result of division is ${Number(firstNum) / Number(secondNum)}`);
-
+if (firstNum === "" || firstNum === null || secondNum === "" || secondNum === null) {
+    alert('Error');
+} else {
+    const addition = alert('Сума ' + (Number(firstNum) + Number(secondNum)));
+    if (Number(firstNum) < Number(secondNum)) confirm('Ви хочете продовжити операцію?') && alert('Різниця ' + (Number(firstNum) - Number(secondNum)));
+    const multiplication = alert('Добуток ' + Number(firstNum) * Number(secondNum));
+    const division = Number(secondNum) === 0 ? alert('На нуль ділити не можна') : alert('Частка ' + Number(firstNum) / Number(secondNum));
+    
+}
