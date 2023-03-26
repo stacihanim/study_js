@@ -14,16 +14,6 @@ function Accumulator(num) {
 
     
 }
-Accumulator.prototype.increment = function() {
-    this.num++;
-    console.log(this.num);
-}
-Accumulator.prototype.decrement = function() {
-    this.num--;
-    console.log(this.num);
-}
-
-
 
 function CancelableAccumulator(num) {
     Accumulator.call(this, num);
@@ -43,5 +33,6 @@ accumulator.decrement();
 accumulator.increment();
 
 accumulator.clear();
+accumulator.increment();
 accumulator.increment();
 accumulator.decrement();
