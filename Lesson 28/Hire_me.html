@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="hire_body">
+    <div class="hire_wrapper">
+    <main>
+        <h2 class="hire_h2">Hire me</h2>
+        <h3 class="hire_h3">Contact information</h3>
+
+    <section>
+        <table class="hire_table">
+            <tr>
+                <th>
+                    Phone
+                    
+                </th>
+                <td>
+                    +38056455567
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                        Address
+                </th>
+                <td>
+                    Odesa, Ukraine
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <br/>
+
+    <section>
+        <form action="/hire_me.html" method="get">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <table class="contact_table">
+                    <tr>
+                        <th>
+                            <label for="email">Email <span class="asterisk">*</span>:</label>
+                        </th>
+                        
+                        <td>
+                            <input type="email" id="email" name="email" required size="35" maxlength="64"/>
+                            <div class="error">Enter your email</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            <label for="description">Description:</label>
+                        </th>
+                    
+                        <td >
+                            <textarea name="description" id="description" cols="30" rows="8"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <label for="work-type">Work type:</label>
+                        </th>
+                
+                        <td>
+                            <select name="type" id="work-type">
+                                <option value="in-office">In-Office</option>
+                                <option value="remote">Remote</option>
+                                <option value="one-time-project">One-time Project</option>
+                            </select>
+                        </td>
+                    
+                    </tr>
+
+                </table>
+                    
+                <input type="submit" value="Hire me"/>
+            </fieldset>
+        </form>
+
+
+    </section>
+   
+    </main>
+</div>
+</body>
+</html>

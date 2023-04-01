@@ -1,0 +1,447 @@
+@import 'my-theme';
+
+//paddings
+$big_padding_bottom: 26px;
+$small_padding_bpttom: 15px;
+$padding_second_section: 55px;
+
+//main cv
+$max_width: 1200px;
+$font_weght: 600;
+$font_family: 'Inter';
+$font_type: sans-serif;
+
+//photo
+$photo_width: 385px;
+$photo_heigth: 292px;
+
+//headline
+$headline_font_size: 36px;
+
+//text font size
+$text_font_size: 16px;
+
+//hire me
+$hire_max_width: 1024px;
+
+
+//main_theme
+$color_main_primary: #86A3B4;
+$color_main_secondary: #1C2E8C;
+$color_main_tertiary: #FFFFFF;
+$color_border: #000000;
+$color_headline: #1E1E1E;
+$color_text: #263036;
+$color_higlight: #fc0;
+$color_box_shadow: #968c8c;
+$error_color: #ED0131;
+
+//hire me form
+$textarea_background_color: #F8FAFC;
+$textarea_color: #3B4256;
+$textarea_selection: #0048D9;
+
+//table
+$table_border_color: black;
+
+//select
+$select_color: #B8BCCA;
+$select_background_color: #F8FAFC;
+$select_focus_color: #3B4256;
+
+//button
+$submit_color: #FFFFFF;
+$submit_background_color: #0048D9;
+$submit_hover_background_color: #002266;
+
+
+// index page
+
+.body_cv {
+    max-width: $max_width;
+    display: flex;
+    flex-direction: row;
+    font-family: $font_family, $font_type;
+    border: 1px solid $color_border;
+    font-weight: $font_weght;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.primary {
+    background-color: $color_main_primary;
+    border-right: 1px solid $color_border;
+    box-shadow: 4px 0px 7px $color_box_shadow;
+}
+
+.secondary {
+    max-width: calc(100vw - 385px);
+    padding-left: $padding_second_section;
+    padding-right: $padding_second_section;
+}
+
+.photo {
+    width: $photo_width;
+    height: $photo_heigth;
+    object-fit: cover;
+    object-position: 0% 40%;
+    transition: transform 1s;
+    /*&:hover {
+        transform: scale(1.2) translate(2rem, 2rem);
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }*/
+}
+
+.zoomIn {
+    transform: scale(1.2) translate(2rem, 2rem);
+}
+
+.char {
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 6px;
+    line-height: 6px;
+}
+.headlines {
+    font-size: $headline_font_size;
+    color: $color_headline;
+    padding-bottom: $big_padding_bottom;
+    border-bottom: 5px solid $color_border;   
+}
+
+.headline_name {
+    font-size: 40px;
+    padding-left: 40px;
+    margin-bottom: 16px; 
+}
+
+.first_name {
+    color: $color_main_tertiary;
+}
+
+.last_name {
+    color: $color_main_secondary;
+}
+
+.offer_link {
+    display: inline-block;
+    text-shadow: $color_main_secondary 1px 0 10px;
+    text-decoration: none;
+    color: $color_main_tertiary;
+    padding: 5px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    &:hover {
+        text-shadow: $color_higlight 1px 0 10px;
+    }
+}
+
+article .headlines {
+    font-size: 32px;
+    color: $color_text;
+}
+
+.text {
+    font-size: $text_font_size;
+    color: $color_text;
+}
+
+.contact, .lang {
+    padding-left: 40px;
+    padding-right: 52px;
+}
+
+.primary .headlines {
+    padding-bottom: $small_padding_bpttom;
+}
+
+.table_head {
+    font-size: 24px;
+    color: $color_text;
+    margin-bottom: 11px;    
+}
+
+.table .text {
+    margin: 0;
+}
+
+.lang_list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.lang_list li {
+    padding-bottom: $small_padding_bpttom;
+}
+
+p {
+    color: $color_text;
+}
+
+.cell_link {
+    color: $color_main_secondary;
+    text-decoration: none;
+    &:hover {
+       cursor: pointer;
+    }
+    &:visited {
+        color: $color_main_secondary;
+        text-decoration: none; 
+    }
+}
+
+.text_info {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.work_position_1 {
+    margin-top: 31px;
+    margin-bottom: 0;
+}
+
+.work_position_2 {
+    margin-top: 15px;
+    opacity: 0.7;
+    transition: 2s;
+    &:hover {
+        opacity: 1;  
+    }
+}
+
+// import adaptive media
+
+// @import "layout/media";
+@media screen and (max-width: 400px) {
+    .body_cv {
+        display: flex;
+        flex-direction: column;
+    }
+    .secondary {
+        max-width: none;
+    }
+    .photo:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    .work_position_2 {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .body_cv {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 372px;
+    }
+    .photo:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    .work_position_2 {
+        opacity: 1;
+    }  
+}
+
+// hire me page
+
+.hire_body {
+    max-width: $hire_max_width;
+    font-family: $font_family, $font_type;
+}
+
+.hire_wrapper {
+    position: absolute; 
+    left: 50%;
+    margin-left: -256px;
+}
+
+.hire_h2 {
+    font-size: 32px;
+}
+
+.hire_h3 {
+    font-size: 24px;
+    font-weight: $font_weght;
+}
+
+.hire_h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hire_table {
+    border-collapse: collapse;
+    
+}
+
+.hire_table th {
+    font-weight: $font_weght;
+}
+
+.hire_table th, .hire_table td {
+    border: 1px solid $table_border_color;
+    padding: 5px;
+}
+
+legend {
+    font-weight: $font_weght;
+}
+
+.contact_table {
+    padding-top: 7px;
+}
+
+.contact_table tr {
+    vertical-align: top;
+    text-align: left;
+}
+
+.contact_table th, .contact_table td {
+    padding-bottom: 15px;
+    padding-right: 4px;
+}
+
+.contact_table label {
+    font-weight: $font_weght;
+}
+
+.asterisk {
+    color: $error_color;
+}
+
+.error {
+    display: none;
+    color: $error_color;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 2;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none; 
+}
+
+input[type="email"], textarea, select {
+    width: 460px;
+    padding: 5px;
+    background-color: $textarea_background_color;
+    border-radius: 4px;
+    color: $textarea_color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid rgba(0, 0, 0, 0);
+    &:hover {
+        border: 1px solid $textarea_selection;
+        color: $textarea_color;
+    }
+
+}
+
+input[type="email"]:hover:invalid {
+    border: 1px solid $error_color;
+}
+
+input[type="email"]:invalid + .error {
+    display: block;
+}
+ 
+textarea {
+    max-height: 164px;
+}
+
+select[name="type"] {
+    width: 470px;
+    background: url('./Vector.svg') no-repeat center right .75rem;
+    color: $select_color;
+    letter-spacing: 0.01em;
+    background-color: $select_background_color;
+    &:focus {
+        color: $select_focus_color;
+    }
+}
+
+//Submit button
+
+input[type="submit"] {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: $submit_background_color;
+    color: $submit_color;
+    border-radius: 6px;
+    padding: 4px 16px 4px 16px;
+    &:hover {
+        background-color: $submit_hover_background_color;
+        cursor: pointer;
+        border: none;
+    }
+    &:disabled {
+        background: rgba(0, 72, 217, 0.45);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
+}
+
+// @import "utils/animation";
+//variables
+
+$elevate_duration: 0.5s;
+$zoom_scale_from: 2;
+$zoom_scale_to: 0;
+$zoom_duration: 2s;
+
+//first animation
+
+@keyframes elevate {
+    0% {
+        margin-top: 50vh;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@mixin elevate($duration) {
+    animation: elevate $duration linear;
+}
+
+.primary {
+    @include elevate($elevate_duration)
+}
+
+.secondary {
+    @include elevate($elevate_duration * 2)
+}
+
+//second animation
+
+@keyframes zoom_out {
+    from {
+        transform: scale($zoom_scale_from);
+        opacity: 0;
+      }
+      to {
+        transform: scale($zoom_scale_to);
+        opacity: 1;
+      }
+}
+
+@mixin zoom_out($duration) {
+    animation: zoom_out $duration reverse;
+}
+
+.hire_wrapper {
+    @include zoom_out($zoom_duration)
+}
