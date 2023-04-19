@@ -12,23 +12,33 @@ const user = {
     }
 }
 
-console.log(user.sayHello());
-console.log(isEmptyObj(user));
+// console.log(user.sayHello());
+// console.log(isEmptyObj(user));
 
 
-function createUser(name, age) {
-    return {
-        name: name,
-        age: age,
-        sayHello: function() {
-                    return `Привіт, я ${this.name}, мені ${this.age} років.`
-                }
-}
-}
-const yoda = createUser('майстер Йода', 500);
-console.log(yoda.sayHello());
-const grogu = createUser('Грогу', 50);
-console.log(grogu.sayHello());
+// function createUser(name, age) {
+//     return {
+//         name: name,
+//         age: age,
+//         sayHello: function() {
+//                     return `Привіт, я ${this.name}, мені ${this.age} років.`
+//                 }
+// }
+// }
+// const yoda = createUser('майстер Йода', 500);
+// const grogu = createUser('Грогу', 50);
+// console.log(grogu.sayHello());
+const sayHello = function() {
+
+    this.name = prompt("Введіть ваше імʼя")
+    
+    this.age = +prompt("Скільки вам років?")
+    
+    return `Привіт, я ${this.name}, мені ${this.age}`
+    
+    }
+console.log(sayHello());
+
 
 
 // 3.
